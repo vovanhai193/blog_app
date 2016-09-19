@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :show]
-  before_action :correct_user,   only: [:show]
+  before_action :logged_in_user, only: [:index]
+  #before_action :correct_user,   only: [:show]
   
   def new
   	@user = User.new
@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+    @entries = @user.entries.paginate(page: params[:page])
   end
 
   def create
