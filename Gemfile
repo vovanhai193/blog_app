@@ -5,8 +5,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 # secure password
 gem 'bcrypt',               '3.1.7'
+#seeds
+gem 'faker',                '1.4.2'
 # Bootstrap
 gem 'bootstrap-sass',       '3.2.0.0'
+#pagination
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -22,6 +27,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+gem 'pry-byebug'
+gem 'pry-rails'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
