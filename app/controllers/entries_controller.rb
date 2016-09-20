@@ -19,6 +19,15 @@ class EntriesController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  def show
+    @entry = Entry.find(params[:id])
+    @comments = @entry.comments.paginate(page: params[:page])
+    if @entry.nil?
+      flash.now[:danger] = "Entry not found"
+      respond_to do root_url
+    end
+  end
+end
   private
 
     def entry_params

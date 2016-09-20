@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :following, :followers]
+  before_action :logged_in_user, only: [:following, :followers]
   #before_action :correct_user,   only: [:show]
   
   def new
