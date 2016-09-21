@@ -8,9 +8,11 @@
         <%= current_user.name %>
       </h1>
     </section>
+    <% if current_user.following?(@entry.user) %>
     <section class="micropost_form">
         <%= render 'shared/comment_form' %>
       </section>
+      <% end %>
   </aside>
   <% end %>
   <div class="col-md-8">
