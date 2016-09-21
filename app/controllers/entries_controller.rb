@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
   def destroy
     @entry.destroy
     flash[:success] = "Entry deleted"
-    redirect_to request.referrer || root_url
+    redirect_to root_url
   end
 
   def show
